@@ -1,6 +1,6 @@
 /* 
     INSTRUCTIONS / TO DO
-        slice( ): Returns a piece of a string
+        slice( ): Returns a piece of a string (DONE)
         replace( ):Replaces the first instance of a matching character in a string
         replaceAll( ): Replaces all instances of a matching character in a string
         concat( ): Merges two strings together (DONE)
@@ -9,17 +9,24 @@
 
 // Slice --------------------------------------------
 
-var slicedWord = "slicedWord";
+var wordBeingSliced = "slicedWord";
 
-function slice(num1, num2){
+function slice(word, num1, num2){
 
+    var slicedWord = "";
+
+    for (var i=num1; i<num2 ; i++){
+        slicedWord += word[i];
+    }
+
+    console.log(slicedWord);
 }
 
 // Replace ------------------------------------------
 
 var replaceWordEx = "I like yellow";
 
-function replace(word, wordReplacing){
+function replace(word, target, replacement){
 
 }
 
@@ -27,8 +34,8 @@ function replace(word, wordReplacing){
 
 var replaceThisWord = "Minecraft is cool";
 
-function replaceAll(word, wordThatWillReplace){
-    
+function replaceAll(word, target, replacement){
+
 }
 
 // Concat -------------------------------------------
@@ -38,8 +45,9 @@ var lastName = "To";
 
 function concat(word1, word2){
 
+    //Changes up the first variable
     firstName = firstName+lastName;
-
+    //Console logs this
     console.log(firstName);
 
 }
@@ -51,7 +59,9 @@ var charAtWord = "Gold";
 function charAt(word, num){
 
     for (var i = 0; i< word.length; i++){
+        // Runs all of the indexes in the string
         if (i === num){
+            // If its that index, console log this to show
             console.log(word[i]);
         }
     }
@@ -60,6 +70,7 @@ function charAt(word, num){
 
 // Calls to function ---------------------------------
 
+slice(wordBeingSliced, 3, 6);
 
 concat(firstName, lastName);
 charAt(charAtWord, 2);

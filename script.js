@@ -24,17 +24,52 @@ function slice(word, num1, num2){
 
 // Replace ------------------------------------------
 
-var replaceWordEx = "I like yellow";
+var replaceWordEx = "Yellow";
+var targetLetter = "l";
+var replacementLetter = "m";
 
 function replace(word, target, replacement){
+
+    var firstTime = true;
+    var newWord = "";
+
+    for (var i=0; i<word.length; i++){
+        if (word[i] === target){
+
+            if(firstTime === true){
+                newWord += replacement;
+                firstTime = false;
+            }
+            else{
+                newWord += word[i];
+            }
+
+        }
+        else{
+            newWord += word[i];
+        }
+    }
+
+    console.log(newWord);
 
 }
 
 // ReplaceAll ---------------------------------------
 
-var replaceThisWord = "Minecraft is cool";
-
 function replaceAll(word, target, replacement){
+
+    var newWord = "";
+
+    for (var i=0; i<word.length; i++){
+        if (word[i] === target){
+            newWord += replacement;
+        }
+        else{
+            newWord += word[i];
+        }
+    }
+
+    console.log(newWord);
 
 }
 
@@ -71,6 +106,7 @@ function charAt(word, num){
 // Calls to function ---------------------------------
 
 slice(wordBeingSliced, 3, 6);
-
+replace(replaceWordEx, targetLetter, replacementLetter);
+replaceAll(replaceWordEx, targetLetter, replacementLetter);
 concat(firstName, lastName);
 charAt(charAtWord, 2);

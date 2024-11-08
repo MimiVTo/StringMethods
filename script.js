@@ -97,9 +97,9 @@ var lastName = "To";
 function concat(word1, word2){
 
     //Changes up the first variable to contain both itself and the other one
-    firstName = firstName+lastName;
+    word1 = word1+word2;
     //Console logs this
-    console.log(firstName);
+    console.log(word1);
 
 }
 
